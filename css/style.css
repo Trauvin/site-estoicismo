@@ -155,7 +155,19 @@ body {
   color: #5b71eb;
 }
 
+.perguntas dt.ativo::after {
+  content: "⤴";
+}
+
 .perguntas dd {
   font-family: "Ubuntu", sans-serif;
   margin-bottom: 0.575rem;
+}
+
+.js-faq dd {
+  display: none;
+}
+
+.js-faq dd.ativo {
+  display: block;
 }
