@@ -245,3 +245,50 @@ body {
     margin: 10px;
   }
 }
+
+[data-menu="button"] {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  [data-menu="button"] {
+    display: flex;
+    background: #222;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    z-index: 900;
+    /* float: right; */
+  }
+  .menu ul {
+    display: none;
+  }
+
+  [data-menu="button"]::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 4px #fff, 0 -4px #fff;
+    margin-right: 5px;
+  }
+  .menu ul.ativo {
+    display: block;
+    position: absolute;
+    background: #222;
+    width: 160px;
+    z-index: 200;
+    padding: 60px 0 20px 0;
+    top: 0;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+}
