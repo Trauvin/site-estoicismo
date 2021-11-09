@@ -1,6 +1,5 @@
 export default function scrollSuave() {
   const menuItens = document.querySelectorAll('[data-menu] a[href^="#"]');
-  console.log(menuItens);
 
   menuItens.forEach((item) => {
     item.addEventListener('click', scrollToId)

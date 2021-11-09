@@ -13,7 +13,14 @@
   <nav class="menu">
     <button data-menu="button">Menu</button>
     <ul data-menu="list">
-      <li><a href="#estoicos">Estoicos</a></li>
+      <li data-dropdown>
+        <a href="#estoicos" >Estoicos</a>
+        <ul class="dropdown-menu">
+          <li><a href="#marco-aurelio">Marco Aurelio</a></li>
+          <li><a href="#seneca">Seneca</a></li>
+          <li><a href="#epiteto">Epicteto</a></li>
+        </ul>
+      </li>
       <li><a href="#faq">Faq</a></li>
       <li><a href="#contato">Contato</a></li>
       <li><a href="https://google.com">Dev ➜ </a></li>
@@ -39,31 +46,31 @@
   <section class="grid-section-2 pensadores" id="pensadores">
     <h1 class="titulo gs-2">Grandes Estoicos</h1>
     <ul class="pensadores-lista js-lista">
-      <li>
+      <li class="seneca-img">
         <img src="img/seneca.JPG" alt="Seneca">
       </li>
-      <li>
+      <li class="marco-aurelio-img">
         <img src="img/marco-aurelio.jpg" alt="Marco Aurélio">
       </li>
-      <li>
+      <li class="epiteto-img">
         <img src="img/epicteto.jpg" alt="Epiteto">
       </li>
     </ul>
     <div class="pensadores-descricao js-descricao">
-      <section class="seneca">
+      <section class="seneca" id="seneca">
         <h2 class="subtitulo">Sêneca</h2>
         <p>Lúcio Aneu Séneca (português europeu) ou Sêneca (português brasileiro) (em latim: Lucius Annaeus Seneca; Corduba, ca. 4 a.C. — Roma, 65) foi um filósofo estoico e um dos mais célebres advogados, escritores e intelectuais do Império Romano. Conhecido também como Séneca (ou Sêneca), o Moço, o Filósofo, ou ainda, o Jovem, sua obra literária e filosófica, tida como modelo do pensador estoico durante o Renascimento, inspirou o desenvolvimento da tragédia na dramaturgia europeia renascentista. </p>
         <p>
           Sêneca foi simultaneamente dramaturgo de sucesso, uma das pessoas mais ricas de Roma, estadista famoso e conselheiro do imperador. Sêneca teve que negociar, persuadir e planejar seu caminho pela vida. Ao invés de filosofar da segurança da cátedra de uma universidade, ele teve que lidar constantemente com pessoas não cooperativas e poderosas e enfrentar o desastre, o exílio, a saúde frágil e a condenação à morte. Sêneca correu riscos e teve grandes feitos.
         </p>
       </section>
-      <section class="marco-aurelio">
+      <section class="marco-aurelio" id="marco-aurelio">
         <h2 class="subtitulo">Marco Aurélio</h2>
         <p>
           Marco Aurélio (em latim Marcus Aurelius Antoninus; 26 de abril de 121 — 17 de março de 180), foi imperador romano desde 161 até sua morte. Seu reinado foi marcado por guerras na parte oriental do Império Romano contra os partas, e na fronteira norte, contra os germanos. Foi o último dos cinco bons imperadores, e é lembrado como um governante bem-sucedido e culto; dedicou-se à filosofia, especialmente à corrente filosófica do estoicismo, e escreveu uma obra que até hoje é lida, Meditações. 
         </p>
       </section>
-      <section class="epiteto">
+      <section class="epiteto" id="epiteto">
         <h2 class="subtitulo">Epicteto</h2>
         <p>
           Epiteto ou Epicteto (em grego: Επίκτητος; romaniz.: Epíktetos; Hierápolis, 55 - Nicópolis, 135) foi um filósofo grego estoico que viveu a maior parte de sua vida em Roma, como escravo a serviço de Epafrodito, o cruel secretário de Nero que, segundo a tradição, uma vez lhe quebrou uma perna.
