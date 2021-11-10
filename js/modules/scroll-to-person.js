@@ -8,37 +8,28 @@ export default function scrollToPerson() {
   function scrollTo(event) {
     const sections = document.querySelectorAll('.js-descricao section');
     const href = this.getAttribute('href');
-    const to = document.querySelector(href).offsetTop;
 
     sections.forEach((section) => {
+      const pensadoresLista = document.querySelector('.pensadores-lista');
       section.classList.remove('ativo');
+
+      // verifica se o href e o id correspondem a uma seção
       if (href === "#" + section.getAttribute('id')) {
         section.classList.toggle('ativo');
-        console.log(section);
-      }
-    });
 
-    window.scroll({
-      top: to,
-      behavior: 'smooth'
+        // seleciona a imagem correspodente e sua posição Y no scroll interno
+        const imageCorrespondente = document.querySelector('.' + section.getAttribute('id') + '-img' + ' img').y - 40;
+
+        pensadoresLista.scroll({
+          top: imageCorrespondente,
+          behavior: 'smooth'
+        });
+
+        window.scroll({
+          top: pensadoresLista.offsetTop - 150,
+          behavior: 'smooth'
+        });
+      }
     });
   }
 }
-// function findElement(elementId) {
-
-//   const listaPensadores = document.querySelectorAll('.js-lista li');
-//   const descricoes = document.querySelectorAll('.js-descricao section');
-
-//   descricoes[0].classList.add('ativo');
-
-//   listaPensadores.forEach((item, index) => {
-//     if (elementId == item.getAttribute(id)) {
-//       item.addEventListener('click', function() {
-//         descricoes.forEach((d) => {
-//           d.classList.remove('ativo');
-//         })
-//         descricoes[index].classList.toggle('ativo');
-//       });
-//     }
-//   });
-// }
