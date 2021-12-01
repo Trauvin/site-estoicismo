@@ -9,6 +9,11 @@ export default function scrollToPerson() {
     const sections = document.querySelectorAll('.js-descricao section');
     const href = this.getAttribute('href');
 
+    verifyScroll(href, sections);
+
+  }
+
+  function verifyScroll(href, sections) {
     sections.forEach((section) => {
       const pensadoresLista = document.querySelector('.pensadores-lista');
       section.classList.remove('ativo');
@@ -30,6 +35,6 @@ export default function scrollToPerson() {
           behavior: 'smooth'
         });
       }
-    });
-  }
+    }
+  )}
 }

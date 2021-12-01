@@ -1,10 +1,13 @@
-export default function outsideCLick(events, element, callback) {
+export default function outsideCLick() {
   const html = document.documentElement;
+  const menu = document.querySelector('[data-menu="list"]');
 
 
-  function clickLocation(event) {
-    
+  function closeMenu(event) {
+    if (event.target !== menu) {
+      menu.classList.add('inativo')
+    }
   }
 
-  html.addEventListener('click', clickLocation);
+  html.addEventListener('click', closeMenu)
 }

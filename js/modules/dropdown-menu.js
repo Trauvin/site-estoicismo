@@ -13,5 +13,6 @@ export default function dropdownMenu() {
     event.preventDefault();
     this.classList.toggle('active');
   }
+
 }
 

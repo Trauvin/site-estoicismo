@@ -5,6 +5,7 @@ import outsideCLick from './modules/outside-click.js';
 import scrollSuave from './modules/scroll-suave.js';
 import dropdownMenu from './modules/dropdown-menu.js';
 import scrollToPerson from './modules/scroll-to-person.js';
+import initQuote from './modules/fetch-quotes.js';
 
 displayDescription();
 mostraEsconde();
@@ -13,6 +14,11 @@ outsideCLick();
 scrollSuave();
 dropdownMenu();
 scrollToPerson();
+initQuote();
+// scrollAnimation();
+
+
+
 
 
 

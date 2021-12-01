@@ -1,5 +1,4 @@
 export default function menuMobile() {
-
   const menuButton = document.querySelector('[data-menu="button"]');
   const menuList = document.querySelector('[data-menu="list"]');
 
